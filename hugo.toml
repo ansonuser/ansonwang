@@ -1,0 +1,4 @@
+baseURL = 'https://ansonusr/ansonwang.github.io/'
+languageCode = 'en-us'
+title = """WANG's Blog"""
+theme = 'ananke'
