@@ -59,7 +59,7 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "${{ steps.deployment.outputs.page_url }}/"
+            --baseURL "https://ansonuser.github.io/ansonwang/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
