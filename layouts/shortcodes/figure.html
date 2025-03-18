@@ -1,0 +1,33 @@
+<figure style="
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, 'Microsoft Yahei', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji';
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+    color-scheme: light dark;
+    -webkit-text-size-adjust: 100%;
+    word-break: normal;
+    word-wrap: break-word;
+    hyphens: auto;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    color: #d8dde2;
+    -webkit-box-sizing: inherit;
+    scrollbar-width: auto;
+    scrollbar-color: rgba(255,255,255,.25) transparent;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;">
+  
+  <!-- Clickable Image -->
+  <a href="{{ .Get "src" | relURL }}" target="_blank">
+    <img src="{{ .Get "src" | relURL }}" alt="{{ .Get "alt" }}" style="max-width: 100%; height: auto;">
+  </a>
+
+  <!-- Caption -->
+  {{ if .Get "caption" }}
+    <figcaption style="margin-top: 5px; font-style: italic; color: #d8dde2;">
+      {{ .Get "caption" }}
+    </figcaption>
+  {{ end }}
+</figure>
