@@ -1,5 +1,6 @@
-baseURL = 'https://ansonuser.github.io/ansonwang/'
-#'/'
+baseURL = '/'
+# 'https://ansonuser.github.io/ansonwang/'
+#
 languageCode = 'en-us'
 title = """WANG's Blog"""
 theme = "hugo-notepadium"
@@ -14,6 +15,11 @@ enableRobotsTXT = true
 
 # [services.googleAnalytics]
 # id = '' # Google tag ID
+
+[build]
+  [build.environment]
+    HUGO_BASEURL = 'https://ansonuser.github.io/ansonwang/'
+
 
 [markup.highlight]
 codeFences = true

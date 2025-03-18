@@ -51,7 +51,7 @@ parameter_f2 = ds.get_parameter()[1]
 
 ```
 
-{{< figure src="/images/cut2features.png" alt="Predict iris" caption="Fig2. Visualization of decision stumps on iris data set." >}}
+{{< figure src="{{< relURL "images/cut2features.png" >}}" alt="Predict iris" caption="Fig2. Visualization of decision stumps on iris data set." > }}
 
 Only training on one feature is quite powerful but maybe we can make a better decision by combining all features and go deeper like a "tree".
 
