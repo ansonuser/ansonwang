@@ -51,7 +51,7 @@ parameter_f2 = ds.get_parameter()[1]
 
 ```
 
-{{< figure src="/images/cut2features.png" alt="Predict iris" caption="Fig2. Visualization of decision stumps on iris data set." >}}
+{{< figure src="/ansonwang/images/cut2features.png" alt="Predict iris" caption="Fig2. Visualization of decision stumps on iris data set." >}}
 
 
 Only training on one feature is quite powerful but maybe we can make a better decision by combining all features and go deeper like a "tree".
@@ -83,7 +83,7 @@ print("test accuracy:", (Y_te == Y_pred).mean() )
 ```
 The test accuracy is 0.933 on my notebook, it is already powerful. We can check the tree to see its prediction path:
 
-{{< figure src="/images/decision_path.png" alt="Decision Path" caption="Fig3. Prediction paths of decision tree." >}}
+{{< figure src="/ansonwang/images/decision_path.png" alt="Decision Path" caption="Fig3. Prediction paths of decision tree." >}}
 
 
 ## Random Forest
@@ -194,7 +194,7 @@ for i in range(iterations):
 
 Running for 30 times and comparing to adaboost from sklearn:
 
-{{< figure src="/images/adaboost_loss.png" alt="Adaboost Loss" caption="Fig4. The result doesn't differ too much but performance from sklearn seems more stable." >}}
+{{< figure src="/ansonwang/images/adaboost_loss.png" alt="Adaboost Loss" caption="Fig4. The result doesn't differ too much but performance from sklearn seems more stable." >}}
 
 ## Gradient Boost
 
@@ -220,7 +220,7 @@ Recursively building tree and updating to the model until the criterion meet.
 Here we will see some comparisons in regression task and classification task. 
 The default split of sklearn's GDBT Classifier is Friedman-mse. Here I simply use gini-impurity for classification task.  
 
-{{< figure src="/images/gbt_loss.png" alt="GDBT Classifier Loss" caption="Fig5. Loss of iris classification task for 30 runs. " >}}
+{{< figure src="/ansonwang/images/gbt_loss.png" alt="GDBT Classifier Loss" caption="Fig5. Loss of iris classification task for 30 runs. " >}}
 
 Friedman-mse :
 
@@ -231,14 +231,14 @@ $$ i^2(R_l, R_r) = \frac{w_l w_r}{w_l + w_r}(\bar{y_l} - \bar{y_r})^2$$
 
 For this simple task, let's check how gradient boost and random forest perform.
 
-{{< figure src="/images/rf_gbt_loss.png" alt="Rf vs GDBT Classifier Loss" caption="Fig6. Loss of iris classification task for random forest versue gradient boosting. " >}}
+{{< figure src="/ansonwang/images/rf_gbt_loss.png" alt="Rf vs GDBT Classifier Loss" caption="Fig6. Loss of iris classification task for random forest versue gradient boosting. " >}}
 
 
 In diabete regression task, the result of comparison between gradient boosting and adaboost is as follows:
 
-{{< figure src="/images/gbr_ada_loss.png" alt="AdaBoost vs GDBT Regressor Loss" caption="Fig7. Loss of diabete regression task for adaboost versus gradient boosting. " >}}
+{{< figure src="/ansonwang/images/gbr_ada_loss.png" alt="AdaBoost vs GDBT Regressor Loss" caption="Fig7. Loss of diabete regression task for adaboost versus gradient boosting. " >}}
 
-{{< figure src="/images/prediction_ada_gdbt.png" alt="AdaBoost vs GDBT Regressor Prediction" caption="Fig8. Relation of adaboost prediction and gradientboost prediction." >}}
+{{< figure src="/ansonwang/images/prediction_ada_gdbt.png" alt="AdaBoost vs GDBT Regressor Prediction" caption="Fig8. Relation of adaboost prediction and gradientboost prediction." >}}
 
 
 A little insight:
