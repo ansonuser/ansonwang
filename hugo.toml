@@ -1,15 +1,16 @@
-baseURL = 'https://ansonuser.github.io/ansonwang/'
+baseURL = "/"
+# 'https://ansonuser.github.io/ansonwang/'
 languageCode = 'en-us'
 title = """WANG's Blog"""
 theme = "hugo-notepadium"
-copyright = "©2019 Notepadium."
+copyright = "©2025 Notepadium."
 
 hasCJKLanguage = true
 
 enableRobotsTXT = true
 
 # [services.disqus]
-# shortname = '' # Disqus shortname
+# shortname = 'Anson' # Disqus shortname
 
 # [services.googleAnalytics]
 # id = '' # Google tag ID
@@ -25,19 +26,19 @@ unsafe = true  # enable raw HTML in Markdown
 style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
 dateFormat = "Monday, January 2, 2006"  # if unset, default is "2006-01-02"
 logo = ""  # if you have a logo png
-slogan = "100% JavaScript-free"
+slogan = "Bonne petite !!" 
 license = ""  # CC License
 fullRss = false # Puts entire HTML post into rss 'description' tag. If unset, default is false.
 ipv6ready = true # Show IPV6Ready logo on footer.
 
 [params.comments]
-enable = false  # En/Disable comments globally, default: false. You can always enable comments on per page.
+enable = true  # En/Disable comments globally, default: false. You can always enable comments on per page.
 
 [params.comments.utterances]
-repo = "MetalBlueberry/MetalBlueberry.github.io" # enable comments with [utteranc.es](https://utteranc.es/)
+repo = "ansonuser/ansonwang.github.io" # enable comments with [utteranc.es](https://utteranc.es/)
 
 [params.math]
-enable = false  # optional: true, false. Enable globally, default: false. You can always enable math on per page.
+enable = true  # optional: true, false. Enable globally, default: false. You can always enable math on per page.
 use = "katex"  # option: "katex", "mathjax". default: "katex"
 
 [params.syntax]
@@ -60,9 +61,9 @@ showTags = true             # /tags/
 title = "About"
 url = "/about"
 
-[[params.nav.custom]]
-title = "Hugo"
-url = "https://gohugo.io/"
+#[[params.nav.custom]]
+#title = "Hugo"
+#url = "https://gohugo.io/"
 
 # for chinese
 [params.beian]
