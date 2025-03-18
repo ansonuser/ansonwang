@@ -26,7 +26,7 @@ Tree-based methods are widely used in many applications. This article will intro
 "Induction of One-Level Decision Trees" was introduced by Iba Wayne et al. It is also called "weaker learners" or "base learners". For each feature, find the best cut to discriminate between two classes.
 
 
-{{< figure src="/images/one_cut.png" alt="One Cut" caption="Fig1. Example of one cut, if a feature value x > 10 then the model goes to the left leaf and predicts it as blue color. " >}}
+{{< figure src="/ansonwang/images/one_cut.png" alt="One Cut" caption="Fig1. Example of one cut, if a feature value x > 10 then the model goes to the left leaf and predicts it as blue color. " >}}
 
 ### Experiment
 
