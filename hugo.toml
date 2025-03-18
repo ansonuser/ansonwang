@@ -1,5 +1,5 @@
-baseURL = "/"
-# 'https://ansonuser.github.io/ansonwang/'
+baseURL = 'https://ansonuser.github.io/ansonwang/'
+#'/'
 languageCode = 'en-us'
 title = """WANG's Blog"""
 theme = "hugo-notepadium"
