@@ -263,13 +263,13 @@ Decision stump is one level decision tree. Build a decision tree by multi-level 
 ## References
 [1] Iba, Wayne, et al."Induction of One-Level Decision Trees." ML92, 1992.
 
-[2] https://en.wikipedia.org/wiki/Decision_tree
+[2] Decision Tree, (wiki)[https://en.wikipedia.org/wiki/Decision_tree]
 
 [3] Ho, Tin Kam. "Random Decision Forests." IEEE, 1998
 
-[4] https://en.wikipedia.org/wiki/Random_forest
+[4] Random Forest, (wiki)[https://en.wikipedia.org/wiki/Random_forest]
 
-[5] Alan Yuille, Lecture 7. AdaBoost[https://www.cs.jhu.edu/~ayuille/courses/Stat161-261-Spring14/LectureNotes7.pdf], 2014
+[5] Alan Yuille, Lecture 7. (AdaBoost)[https://www.cs.jhu.edu/~ayuille/courses/Stat161-261-Spring14/LectureNotes7.pdf], 2014
 
 [6] Yoav Freund, et al."A decision-theoretic generalization of on-line  learning and an application to boosting." JCSS, 1997.
 
