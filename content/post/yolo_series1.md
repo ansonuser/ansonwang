@@ -63,7 +63,7 @@ Apply non-maximum suppression (NMS) to remove bad detections.
 
 {{< figure src="/ansonwang/images/yolov2_arch.png" alt="YOLOv2 Arch" caption="Fig2. YOLOv2 Architecture. (src: Chien-Yao Wang, et al, 2024)" >}}
 
-Improvements:
+**Improvements**:
 - Fully convolutional layers(use channel as prediction) replace fully connected layers. 
 - Anchor boxes (use a set of prior boxes)
 - Direct Location prediction: Predict offsets (relative location to "grid cell"), see Fig2.
