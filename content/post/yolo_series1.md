@@ -94,3 +94,12 @@ Apply non-maximum suppression (NMS) to remove bad detections.
     - Upsample and infues with 52x52x256
     (small object)
 - Bounding box priors with k-means
+
+
+## References
+
+[1] Chien-Yao Wang, et al, YOLOv1 to YOLOv10: The fastest and most accurate real-time object detection systems, 2024
+[2] Juan R. Terven, et al, A COMPREHENSIVE REVIEW OF YOLO ARCHITECTURES IN COMPUTER VISION: FROM YOLOV1 TO YOLOV8 AND YOLO-NAS, 2024
+[3] Joseph Redmon, et al, You Only Look Once: Unified, Real-Time Object Detection, CVPR, 2015
+[4] Joseph Redmon, et al, YOLO9000: Better, Faster, Stronger, CVPR, 2016
+[5] Joseph Redmon, et al, YOLOv3: An Incremental Improvement, CVPR, 2018
