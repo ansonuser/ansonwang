@@ -23,10 +23,10 @@ COCO (Common Objects in Context, 80 object categories) is a large-scale dataset 
 - AP Calculation: The area under the Precision-Recall (PR) curve is computed as the AP score.
 
 ### Common Notations:
-- AP (IoU=0.50:0.95) → Mean Average Precision (mAP) - across IoUs (strictest).
+- AP (IoU=0.50:0.95) → Mean Average Precision (mAP)across IoUs (strictest).
 - AP50 → AP at IoU = 0.50 (relaxed, detects if - objects are roughly correct).
 - AP75 → AP at IoU = 0.75 (stricter, requires higher overlap).
-- $$AP_{small}$$, $$AP_{medium}$$, $$AP_{large}$$ → AP scores for objects of different sizes.
+- APsmall, APmedium, APlarge → AP scores for objects of different sizes.
 
 
 ## YOLOv1
@@ -99,7 +99,11 @@ Apply non-maximum suppression (NMS) to remove bad detections.
 ## References
 
 [1] Chien-Yao Wang, et al, YOLOv1 to YOLOv10: The fastest and most accurate real-time object detection systems, 2024
-[2] Juan R. Terven, et al, A COMPREHENSIVE REVIEW OF YOLO ARCHITECTURES IN COMPUTER VISION: FROM YOLOV1 TO YOLOV8 AND YOLO-NAS, 2024
+
+[2] Juan R. Terven, et al, A Comprehensive Review of YOLO Architectures in Computer Vision: From YOLOv1 to YOLOv8 and YOLO-NAS, 2024
+
 [3] Joseph Redmon, et al, You Only Look Once: Unified, Real-Time Object Detection, CVPR, 2015
+
 [4] Joseph Redmon, et al, YOLO9000: Better, Faster, Stronger, CVPR, 2016
+
 [5] Joseph Redmon, et al, YOLOv3: An Incremental Improvement, CVPR, 2018
