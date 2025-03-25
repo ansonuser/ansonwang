@@ -61,8 +61,7 @@ $$ b_y = (1 + s_y) \sigma(t_y) - 0.5 s_y + c_y $$
 $$ b_w = p_w e^{t_w}, b_h = p_h e^{t_h} $$ where $$s_{x,y}$$ give the scalibity max the prediction more flexible. 
 
 **Edge case:** 
-1. $$ \sigma(t_x) = 1 $$ 
-$$ => b_x = 1 + 0.5s_x + c_x $$
+1. $$ \sigma(t_x) = 1 $$  $$ => b_x = 1 + 0.5s_x + c_x $$
 
 2. $$ \sigma(t_x) = 0 $$
 $$ => b_x = -0.5 s_x + c_x $$
@@ -96,7 +95,6 @@ Guessed V7 was named because Jocher Glenn added V6 on V5's repo. The other team 
     - EMA on weights for test time 
     - IoU loss (Direct prediction on IoU)
     - SyncBacthNorm (Mean/variance are synchronized across GPUs)
-    - Label assignment strategy
     - Self-distillation (Optional: EMA model provides soft label at the same time)
     - Quantization for depolyment (PTQ, QAT)
 
