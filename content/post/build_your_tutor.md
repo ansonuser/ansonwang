@@ -25,6 +25,9 @@ If we had an agent that could translate information into the way we understand i
 
 **Work Flow**
 
+
+{{< figure src="/ansonwang/images/mermaid.png" >}}
+
 ```mermaid
 graph TD
     START --> tutor
