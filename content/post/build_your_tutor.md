@@ -229,6 +229,10 @@ Recommendation systems are a powerful tool for personalizing the online shopping
 **Conclusion:**
 
 Building a recommendation system is an iterative process. Start with a simple system, test it thoroughly, and gradually add complexity as your knowledge and experience grow. By following this top-down approach, you'll be well-equipped to create a personalized and engaging shopping experience for your users.
+
+
+![My animation](/ansonwang/images/build_your_tutor.gif)
+
 ```
 
 @misc{gen-ai-intensive-course-capstone-2025q1,
