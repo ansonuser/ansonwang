@@ -155,7 +155,7 @@ TODO List:
 ## Murmur
 - Langchain updates too quick for the model to catch up. Searching tool for AI doesn't help too much at this point.
 
-![My animation](/ansonwang/images/build_your_tutor.gif)
+![](/ansonwang/images/build_your_tutor.gif)
 
 ## Example of Output Note
 
