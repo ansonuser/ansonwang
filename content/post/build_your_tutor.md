@@ -12,6 +12,7 @@ math: true
 ---
 
 **Introduction**
+
 First, thanks to 5 days course from Kaggle and Google. This post is to introduce how I build the project, Build-Your-Tutor.
 
 Have you ever found yourself endlessly searching for the same issue, trying different keywords, reading article after article, but still not finding the answer? I’ve been there too. Sometimes, I’m not even sure why the problem is happening in the first place. But I’ve come to realize that part of the challenge lies in how we each perceive the world. Everyone has a unique way of learning and understanding things—which means explanations that make perfect sense to one person might completely miss the mark for someone else.
