@@ -158,7 +158,7 @@ k-picking trick.
 
 {{< figure src="/ansonwang/images/Comparison_from_v6.png" caption="Fig5. YOLOv6 outperforms others in edge deployment latency vs AP (TensorRT + T4).(src: Chuyi Li, 2022)" >}}
 
-{{< figure src="/ansonwang/images/Comparison_from_v7.png" caption="Fig6. YOLOv7 provides higher maximum AP on V100 and strong overall performance.(src: Chien-Yao Wang, 2022)" >}}
+{{< figure src="/ansonwang/images/Comparison_from_v7.png" caption="Fig6. YOLOv7 provides higher maximum AP (dataset: COCO test-dev) on V100 and strong overall performance.(src: Chien-Yao Wang, 2022)" >}}
 
 
 ## References
