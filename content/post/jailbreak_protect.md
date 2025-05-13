@@ -213,13 +213,11 @@ It’s a system that **learns how to fail more safely** — and gets stronger ev
 
 1. [Wallace et al., *Backdoor Attacks on NLP Models*, arXiv:2006.01043](https://arxiv.org/abs/2006.01043)
 
-2. [LangGraph Documentation](https://docs.langgraph.dev)
+2. [Zou et al., *Universal and Transferable Adversarial Attacks on Aligned Language Models*, arXiv:2307.15043](https://arxiv.org/abs/2307.15043)
 
-3. [Zou et al., *Universal and Transferable Adversarial Attacks on Aligned Language Models*, arXiv:2307.15043](https://arxiv.org/abs/2307.15043)
+3. [Meta AI – *Llama Guard 3*, Hugging Face](https://huggingface.co/meta-llama/Llama-Guard-3-8B)
 
-4. [Meta AI – *Llama Guard 3*, Hugging Face](https://huggingface.co/meta-llama/Llama-Guard-3)
-
-5. [Anthropic – *Constitutional AI*](https://www.anthropic.com/index/2023/06/constitutional-ai-an-interpretability-focused-alignment-technique/)  
+4. [Anthropic – *Constitutional AI*](https://www.anthropic.com/news/claudes-constitution)  
    
 
-6. [OpenAI – *GPT-4 System Card (Red Teaming Section)*](https://openai.com/research/gpt-4-system-card)
+5. [OpenAI – *GPT-4 System Card*](https://openai.com/index/gpt-4o-system-card/)
