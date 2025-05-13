@@ -15,7 +15,7 @@ enableRobotsTXT = true
 # shortname = 'Anson' # Disqus shortname
 
 # [services.googleAnalytics]
-# id = '' # Google tag ID
+# id = 'G-521DL5X7G0' # Google tag ID
 
 
 
