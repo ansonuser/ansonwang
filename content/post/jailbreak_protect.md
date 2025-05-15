@@ -8,6 +8,7 @@ tags: [
     "Jailbreak",
     "LLM"
 ]
+categories: ["LLM"]
 math: true
 ---
 

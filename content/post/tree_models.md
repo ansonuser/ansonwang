@@ -7,6 +7,7 @@ tags: [
     "Tree Model",
     "Machine Learning"
 ]
+categories: ["Tree"]
 math: true
 ---
 
