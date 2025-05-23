@@ -89,7 +89,7 @@ The test accuracy is 0.933 on my notebook, it is already powerful. We can check 
 
 ## Random Forest
 
-The probability of most classifiers make same mistake drop exponentially. Use partial features, samples for each tree and ensemble these weak trees to build a strong model. There are different terminoloy like bagging, bootstrap and ExtraTrees all follow the same idea.
+The probability of most classifiers make same mistake drop exponentially. Use partial features, samples for each tree and ensemble these weak trees to build a strong model. There are different terminology like bagging, bootstrap and ExtraTrees all follow the same idea.
 
 ### Experiment
 Use the same set up in decision tree's experiment 
@@ -103,7 +103,7 @@ print("test accuracy:", (prediction_te.values == Y_te_prob.argmax(axis=1)).mean(
 
 The test accuracy is 0.98. The ensemble trees elevate the accuracy.
 
-However, the algorithms have been introduced so far don't really learn efficiently. They try to find the best fit in each step but not take feedback in terms of how wrong they are. To introduce the concept, we will see how models can learn from mistakes in the following sections. They might not overpower than previous methods and they work quite will in most of cases.
+However, the algorithms have been introduced so far don't really learn efficiently. They try to find the best fit in each step but not take feedback in terms of how wrong they are. To introduce this concept, we will see how models can learn from mistakes in the following sections. They might not overpower than previous methods but they work quite well in most of cases.
 
 ## AdaBoost
 
@@ -225,7 +225,7 @@ The default split of sklearn's GDBT Classifier is Friedman-mse. Here I simply us
 
 Friedman-mse :
 
-For two subregions l and r, the improvement can bo formulated as: 
+For two subregions l and r, the improvement can be formulated as: 
 
 
 $$ i^2(R_l, R_r) = \frac{w_l w_r}{w_l + w_r}(\bar{y_l} - \bar{y_r})^2$$
@@ -255,7 +255,7 @@ Gradient methods are quite popular. Many models were built upon this concept.
 
 ## Quick Summary:
 
-Decision stump is one level decision tree. Build a decision tree by multi-level decision stump. Ensemble model reduce the loss by planting many trees to a random forest. For learning from feedback, two methods are introduced, Adaboost learns from put more weights on mistake and Gradient-Based model learns from fitting residual by gradient approach. 
+Decision stump is one level decision tree. Build a decision tree by multi-level decision stump. Ensemble model reduce the loss by planting many trees to a random forest. For learning from feedback, two methods are introduced, Adaboost learns from putting more weights on mistakes and Gradient-Based model learns from fitting residual by gradient approaches. 
 
 
 

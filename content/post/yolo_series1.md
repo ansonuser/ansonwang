@@ -8,6 +8,7 @@ tags: [
     "Machine Learning",
     "Computer Vision"
 ]
+categories: ["YOLO"]
 math: true
 ---
 
