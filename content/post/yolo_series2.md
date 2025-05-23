@@ -135,6 +135,7 @@ $$ b' = \gamma = \frac{b \mu}{\sqrt{\sigma^2 + \epsilon}} + \beta$$
 Run on a small dataset to find min/max for each layer.
 
 Scale: s = (max_float - min_float)/(max_int - min_int)
+
 Zero_points: z = -min_float/scale
 
 After quantization: q(x) = round(x/s) + z
