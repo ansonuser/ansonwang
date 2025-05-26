@@ -64,7 +64,7 @@ showTags = true             # /tags/
 
 [[params.nav.custom]]
 title = "About"
-url = "/about"
+url = "/ansonwang/homepage/about"
 
 #[[params.nav.custom]]
 #title = "Hugo"
