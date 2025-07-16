@@ -31,9 +31,9 @@ math: true
 
 ### 1.1 BM25 (Keyword-Based Retrieval)  
 **Formula**:  
-\[
+$$
 \text{BM25}(Q, D) = \sum_{q \in Q} \text{IDF}(q) \cdot \frac{f(q, D) \cdot (k_1 + 1)}{f(q, D) + k_1 \cdot (1 - b + b \cdot \frac{|D|}{\text{avgdl}})}
-\]  
+$$
 
 **Example**:  
 - **Query**: `"How to prevent colds?"`  
@@ -60,9 +60,9 @@ math: true
 
 ### 1.3 Hybrid Search  
 **Score Fusion**:  
-\[
+$$
 \text{HybridScore} = \alpha \cdot \text{BM25} + (1-\alpha) \cdot \text{DPR}
-\]  
+$$
 
 **Example**:  
 - BM25 Scores: `[0.8, 0.6, 0.5]`  
