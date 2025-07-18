@@ -1,7 +1,7 @@
 ---
 author: "Anson Wang"
 date: "2025-07-16"
-description: "Technologies and Conflict Handling with Practical Examples"
+description: "From Retrieval to Generation: The Technical Evolution and Reflection of Semantic Search"
 title: "From Retrieval to Generation"
 tags: [
     "LLM"
@@ -14,11 +14,10 @@ math: true
 
 
 
-# From Retrieval to Generation: The Technical Evolution and Reflection of Semantic Search
-
+## From Retrieval to Generation
 ---
 
-## Introduction: Rethinking Human Needs Behind the Search Box
+### Introduction: Rethinking Human Needs Behind the Search Box
 
 When we type into the search box, we no longer simply look for keywords. We expect systems to understand our intent, context, and goals. This shift—from "find" to "synthesize"—marks the starting point of integrating semantic search with generative models.
 
@@ -29,64 +28,66 @@ This article is divided into three parts:
 
 ---
 
-## I. Beginner Tutorial: The Evolution from TF-IDF, BM25 to Dense Retriever
-
-### 1. Why Semantic Search?
+#### 1. Why Semantic Search?
 
 - Example: When searching for "apple", do we mean the fruit or the company?
 - Traditional keyword-based IR cannot handle polysemy or complex context.
 
-### 2. TF-IDF and BM25
+#### 2. TF-IDF and BM25
 
 - TF-IDF ranks documents based on term frequency and inverse document frequency.
 - BM25 improves TF-IDF by applying term frequency saturation and document length normalization.
 
-### 3. Dense Retriever
+#### 3. Dense Retriever
 
 - Uses pretrained language models (e.g., BERT) to convert sentences into dense vectors.
 - Searches using cosine similarity or dot product in the embedding space.
 
 ---
 
-## II. Technical Details: Internal Mechanics and Formulas of BM25, Dense Retriever, and FiD
+### II. Technical Details: Internal Mechanics and Formulas of BM25, Dense Retriever, and FiD
 
-### **BM25**
+##### **BM25**
 
-#### 1. Full Scoring Formula
+##### 1. Full Scoring Formula
 
-\[
-\text{score}(D,Q) = \sum_{q_i \in Q} IDF(q_i) \cdot \frac{f(q_i, D) \cdot (k_1 + 1)}{f(q_i, D) + k_1 \cdot (1 - b + b \cdot \frac{|D|}{\text{avgdl}})}
-\]
+$$
+\mathrm{score}(D,Q) = \sum_{q_i \in Q} \mathrm{IDF}(q_i) \cdot \frac{f(q_i, D) \cdot (k_1 + 1)}{f(q_i, D) + k_1 \cdot (1 - b + b \cdot \frac{|D|}{\mathrm{avgdl}})}
+$$
 
-- \( f(q_i, D) \): frequency of query term \( q_i \) in document \( D \)
-- \( |D| \): document length (token count)
-- \( \text{avgdl} \): average document length
-- \( k_1, b \): hyperparameters (typically 1.2–2.0 and 0.75)
+- $f(q_i, D)$: frequency of query term $q_i$ in document $D$
+- $|D|$: document length (token count)
+- $\mathrm{avgdl}$: average document length
+- $k_1, b$: hyperparameters (typically 1.2–2.0 and 0.75)
 
-#### 2. IDF Formula
+##### 2. IDF Formula
 
-\[
-IDF(q_i) = \log\left(\frac{N - n(q_i) + 0.5}{n(q_i) + 0.5} + 1\right)
-\]
-- \(N\): total number of documents
-- \(n(q_i)\): number of documents containing term \(q_i\)
+$$
+\mathrm{IDF}(q_i) = \log\left(\frac{N - n(q_i) + 0.5}{n(q_i) + 0.5} + 1\right)
+$$
 
-#### 3. Meaning of k1 and b
+- $N$: total number of documents
+- $n(q_i)$: number of documents containing term $q_i$
 
-- \(k_1\): controls term frequency saturation
-- \(b\): controls the degree of document length normalization
+##### 3. Meaning of $k_1$ and $b$
 
-### **Dense Retriever**
+- $k_1$: controls term frequency saturation
+- $b$: controls the degree of document length normalization
+
+#### **Dense Retriever**
 
 #### 1. Encoder Architecture
 
 - Dual Encoder (bi-encoder):
-  - Query encoder: \( f(q) = \text{BERT}(q) \rightarrow \vec{q} \)
-  - Document encoder: \( f(d) = \text{BERT}(d) \rightarrow \vec{d} \)
+  - Query encoder: $f(q) = \mathrm{BERT}(q) \rightarrow \vec{q}$
+  - Document encoder: $f(d) = \mathrm{BERT}(d) \rightarrow \vec{d}$
 
 #### 2. Similarity Function
 
-- Cosine similarity:  \( \text{sim}(q, d) = \frac{\vec{q} \cdot \vec{d}}{\|\vec{q}\| \|\vec{d}\|} \)
+- Cosine similarity:  
+  $$
+  \mathrm{sim}(q, d) = \frac{\vec{q} \cdot \vec{d}}{\|\vec{q}\| \|\vec{d}\|}
+  $$
 
 #### 3. Index Structure
 
@@ -96,16 +97,19 @@ IDF(q_i) = \log\left(\frac{N - n(q_i) + 0.5}{n(q_i) + 0.5} + 1\right)
 #### 4. Loss Functions and Training
 
 - Contrastive Loss / InfoNCE
-- Typical setup: positive pairs (q, d+) and hard negatives (d-)
+- Typical setup: positive pairs $(q, d^+)$ and hard negatives $(d^-)$
 
 ### **FiD (Fusion-in-Decoder)**
 
 #### 1. Architecture Overview
 
 - Unlike bi-encoder RAG, FiD encodes all retrieved documents independently but **fuses them at decoding time**.
-- Each document \(d_i\) is passed into a shared encoder along with the query \(q\): \( \text{Enc}(q, d_i) \)
-- All encoder outputs are concatenated and passed to a decoder jointly: \( 
-\text{Dec}([\text{Enc}(q, d_1); \dots; \text{Enc}(q, d_k)]) \)
+- Each document $d_i$ is passed into a shared encoder along with the query $q$: $\mathrm{Enc}(q, d_i)$
+- All encoder outputs are concatenated and passed to a decoder jointly:
+
+$$
+\mathrm{Dec}([\mathrm{Enc}(q, d_1); \dots; \mathrm{Enc}(q, d_k)])
+$$
 
 #### 2. Key Characteristics
 
