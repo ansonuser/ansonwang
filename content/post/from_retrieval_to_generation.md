@@ -47,9 +47,9 @@ This article is divided into three parts:
 
 ### II. Technical Details: Internal Mechanics and Formulas of BM25, Dense Retriever, and FiD
 
-##### **BM25**
+#### **BM25**
 
-##### 1. Full Scoring Formula
+#### 1. Full Scoring Formula
 
 $$
 \mathrm{score}(D,Q) = \sum_{q_i \in Q} \mathrm{IDF}(q_i) \cdot \frac{f(q_i, D) \cdot (k_1 + 1)}{f(q_i, D) + k_1 \cdot (1 - b + b \cdot \frac{|D|}{\mathrm{avgdl}})}
@@ -60,7 +60,7 @@ $$
 - $\mathrm{avgdl}$: average document length
 - $k_1, b$: hyperparameters (typically 1.2–2.0 and 0.75)
 
-##### 2. IDF Formula
+#### 2. IDF Formula
 
 $$
 \mathrm{IDF}(q_i) = \log\left(\frac{N - n(q_i) + 0.5}{n(q_i) + 0.5} + 1\right)
@@ -69,7 +69,7 @@ $$
 - $N$: total number of documents
 - $n(q_i)$: number of documents containing term $q_i$
 
-##### 3. Meaning of $k_1$ and $b$
+#### 3. Meaning of $k_1$ and $b$
 
 - $k_1$: controls term frequency saturation
 - $b$: controls the degree of document length normalization
@@ -128,26 +128,26 @@ $$
 
 ---
 
-## III. Philosophical Perspective: Retrieval is Generation?
+### III. Philosophical Perspective: Retrieval is Generation?
 
-### 1. Why Has Search Become Generation?
+#### 1. Why Has Search Become Generation?
 
 - It’s no longer about matching data, but **combining relevant context with the query** to generate answers aligned with user expectations.
 - Users want **conclusions**, not just **lists**. Thus, search results increasingly resemble summaries, answers, or synthesis.
 - Systems like RAG and FiD turn retrieval into a semantic organizer and viewpoint composer.
 
-### 2. Is RAG Retrieval? Generation? Or Both?
+#### 2. Is RAG Retrieval? Generation? Or Both?
 
 - Retriever becomes a "dynamic knowledge fetcher"
 - LLM performs reasoning and synthesis over retrieved context
 
-### 3. Prompts are No Longer Keywords, but Intent and Perspective
+#### 3. Prompts are No Longer Keywords, but Intent and Perspective
 
 - Search is no longer keyword matching. It's about **interpreting prompts** and **assembling knowledge** accordingly.
 
 ---
 
-## Conclusion: Search is Becoming a Tool for Thinking
+### Conclusion: Search is Becoming a Tool for Thinking
 
 True search is not about finding what we already know—it’s about revealing what we didn’t know we were looking for.
 
