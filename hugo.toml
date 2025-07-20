@@ -25,7 +25,10 @@ codeFences = false
 noClasses = false
 
 [markup.goldmark.renderer]
-unsafe = false  # enable raw HTML in Markdown
+unsafe = true  # enable raw HTML in Markdown
+[markup.goldmark.extensions]
+typographer = false
+
 
 [params]
 style = "dark"  # default: auto. light: light theme, dark: dark theme, auto: based on system.

@@ -12,11 +12,6 @@ math: true
 
 
 
-
-
-## From Retrieval to Generation
----
-
 ### Introduction: Rethinking Human Needs Behind the Search Box
 
 When we type into the search box, we no longer simply look for keywords. We expect systems to understand our intent, context, and goals. This shift—from "find" to "synthesize"—marks the starting point of integrating semantic search with generative models.
