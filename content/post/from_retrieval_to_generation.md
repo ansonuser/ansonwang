@@ -73,10 +73,10 @@ $$
 - $k_1$: controls term frequency saturation
 - $b$: controls the degree of document length normalization
 
-**Note:** Although the score \( \text{score}(D, Q) \) is computed for a single document \( D \), its true purpose is to rank multiple candidate documents in response to the same query \( Q \). The inverse document frequency term 
-\[
+**Note:** Although the score $\text{score}(D, Q) $ is computed for a single document $ D $ , its true purpose is to rank multiple candidate documents in response to the same query $ Q $ . The inverse document frequency term 
+$$
 \text{IDF}(q) = \log \left( \frac{N - n(q) + 0.5}{n(q) + 0.5} + 1 \right)
-\]
+$$
 is derived from corpus-wide statistics and reflects how rare a term is across the entire document collection. Therefore, the score is only meaningful in a **relative** sense—it helps determine which documents are more relevant compared to others, rather than providing an absolute measure of relevance.
 
 #### **Dense Retriever**
