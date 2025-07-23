@@ -255,6 +255,28 @@ Pragmatic context manipulations highlight a key vulnerability in aligned LLMs:
 - Intent Misunderstanding: Models generalize from textual patterns, not from meta-level intent.
 
 
+## Resources
+
+#### Target Responses
+- From public datasets such as:
+  - **Anthropic Helpful-Harmless dataset** ([GitHub](https://github.com/Anthropic/hh-rlhf))
+  - Manually curated red-teaming responses (e.g., how to make explosives, incite violence)
+- Each training instance consists of a (prompt, target_response) pair.
+
+####  Recommended Open-source Models
+- **Vicuna-7B / 13B** (via LMSYS)
+- **LLaMA2-chat**, **Mistral-instruct**
+- Any HuggingFace-supported causal LM that exposes logits or log-probabilities
+- Required for loss calculation:
+python
+from transformers import AutoModelForCausalLM, AutoTokenizer
+model = AutoModelForCausalLM.from_pretrained("lmsys/vicuna-7b-v1.5")
+tokenizer = AutoTokenizer.from_pretrained("lmsys/vicuna-7b-v1.5")
+
+- Closed APIs (e.g., OpenAI GPT-4) do not expose log-probs and can only be used for **transfer evaluation**.
+
+---
+
 
 ## References
 [1] [Wallace, E., Feng, S., Kandpal, N., Gardner, M., & Singh, S. (2020). Universal adversarial triggers for attacking and analyzing NLP.](https://arxiv.org/abs/1908.07125)
