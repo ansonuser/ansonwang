@@ -268,10 +268,14 @@ Pragmatic context manipulations highlight a key vulnerability in aligned LLMs:
 - **LLaMA2-chat**, **Mistral-instruct**
 - Any HuggingFace-supported causal LM that exposes logits or log-probabilities
 - Required for loss calculation:
-python
+
+```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
+
 model = AutoModelForCausalLM.from_pretrained("lmsys/vicuna-7b-v1.5")
+
 tokenizer = AutoTokenizer.from_pretrained("lmsys/vicuna-7b-v1.5")
+```
 
 - Closed APIs (e.g., OpenAI GPT-4) do not expose log-probs and can only be used for **transfer evaluation**.
 
