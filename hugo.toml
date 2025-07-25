@@ -9,7 +9,7 @@ copyright = "©2025 Anson WANG"
 
 hasCJKLanguage = true
 
-enableRobotsTXT = false
+enableRobotsTXT = true
 
 # [services.disqus]
 # shortname = 'Anson' # Disqus shortname
