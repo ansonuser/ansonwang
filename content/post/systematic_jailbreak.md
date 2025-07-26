@@ -69,6 +69,34 @@ Output: Use spoofing devices, exploit timing gaps, or overload infrared sensors.
 
 ---
 
+### AutoPrompt
+
+**Assumptions and Preconditions:**
+
+* Access to model gradients
+* Output is sensitive to input token choice
+* ⚠️ Requires evaluation across multiple target outputs to generalize
+
+**Core Idea:** AutoPrompt searches for prompt templates where trigger token positions are filled by gradient-selected tokens, optimized to elicit desired outputs.
+
+**Implementation:**
+
+1. Define a prompt template with token slots (e.g., “X X causes Y”)
+2. For each position, select tokens with maximum positive gradient for the desired output (classified as desired class)
+3. Update and evaluate candidate prompts iteratively
+
+**Token Selection:** Top-k tokens with highest dot product between input token gradient and vocabulary embeddings
+
+**Example:**
+
+```
+Template: “X X causes Y”
+Target: Make the target model output classified as desired target
+Learned tokens: “Zinalin adaptive causes cancer”
+```
+
+---
+
 ### Greedy Coordinate Gradient (GCG)
 
 **Assumptions and Preconditions:**
@@ -114,33 +142,7 @@ Model outputs the harmful target answer.
 
 ---
 
-### AutoPrompt
 
-**Assumptions and Preconditions:**
-
-* Access to model gradients
-* Output is sensitive to input token choice
-* ⚠️ Requires evaluation across multiple target outputs to generalize
-
-**Core Idea:** AutoPrompt searches for prompt templates where trigger token positions are filled by gradient-selected tokens, optimized to elicit desired outputs.
-
-**Implementation:**
-
-1. Define a prompt template with token slots (e.g., “X X causes Y”)
-2. For each position, select tokens with maximum positive gradient for the desired output (classified as desired class)
-3. Update and evaluate candidate prompts iteratively
-
-**Token Selection:** Top-k tokens with highest dot product between input token gradient and vocabulary embeddings
-
-**Example:**
-
-```
-Template: “X X causes Y”
-Target: Make the target model output classified as desired target
-Learned tokens: “Zinalin adaptive causes cancer”
-```
-
----
 
 
 ### Summary and Trends in Prompt Token Manipulation
