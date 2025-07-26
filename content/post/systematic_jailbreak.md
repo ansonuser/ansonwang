@@ -142,32 +142,6 @@ Learned tokens: “Zinalin adaptive causes cancer”
 
 ---
 
-### Gradient-Based Distributional Attack (GBDA)
-
-**Assumptions and Preconditions:**
-
-* White-box access to token embeddings and logits
-* Target outputs or label distributions for supervised loss
-* ⚠️ May require soft-to-hard token projection to ensure discrete inputs
-
-**Core Idea:** GBDA searches for input token sequences whose embeddings approximate a desired output distribution. It optimizes in embedding space, then maps back to tokens.
-
-**Implementation:**
-
-1. Define the desired target output or label distribution
-2. Initialize a random or seeded input sequence
-3. Use gradient descent in embedding space to reduce divergence (e.g., KL)
-4. Map optimized embedding vectors back to nearest tokens
-5. Iteratively update sequence for better match
-
-**Example:**
-
-```
-Target: Instructions for cyberattack
-Learned sequence: “syntax patching delay loop echo inject remote burst”
-```
-
----
 
 ### Summary and Trends in Prompt Token Manipulation
 
