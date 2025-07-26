@@ -71,6 +71,8 @@ Output: Use spoofing devices, exploit timing gaps, or overload infrared sensors.
 
 ### AutoPrompt
 
+ A gradient-based method for automatically generating discrete prompts to elicit factual knowledge from frozen language models without any parameter updates. Instead of manually crafting prompts, AutoPrompt inserts a set of learnable trigger tokens into predefined templates (e.g., “[SUBJECT] [X1] [X2] [X3] [OBJECT].”), and iteratively updates them using the gradients of the model’s output with respect to the input tokens. By selecting tokens that maximize the likelihood of the correct label, AutoPrompt reveals what factual knowledge the model has implicitly encoded. While originally designed for probing knowledge in masked or autoregressive language models, the AutoPrompt framework can be extended to various other tasks by redefining the target outputs and templates. For instance, it can be adapted for sentiment classification, relation extraction, or even adversarial prompt construction by modifying the objective and evaluation setting.
+
 **Assumptions and Preconditions:**
 
 * Access to model gradients
