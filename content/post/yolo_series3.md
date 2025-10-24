@@ -188,14 +188,14 @@ The team from Tsinghua University develops V10 based on V8. They propose a NMS-f
     {{< figure src="/ansonwang/images/yolov10_model_design.png" caption="Fig14. Analysis of rank across stages and design of block (src: Ao Wang, 2024)">}}
 
 
-    - Rank dimiishing:
+- Rank diminishing:
 
-        In forward pass, the composite function starts from the first layer and keeps multipling all the way to the end of model and algebra tells us 
-        $$ Rank(W_{d}) = min_{i \leq d } Rank(W_i) $$
+    In forward pass, the composite function starts from the first layer and keeps multipling all the way to the end of model and algebra tells us 
+    $$ Rank(W_{d}) = min_{i \leq d } Rank(W_i) $$
 
-        For single layer analysis, simply apply SVD decomposition. Effective rank can be set as a threshold, $$ \epsilon \cdot \sigma_1 $$ 
-        
-        where $$ \sigma_1 $$ is the largest eigenvalue and $$ \epsilon \in \(0, 1\)$$
+    For single layer analysis, simply apply SVD decomposition. Effective rank can be set as a threshold, $$ \epsilon \cdot \sigma_1 $$ 
+    
+    where $$ \sigma_1 $$ is the largest eigenvalue and $$ \epsilon \in \(0, 1\)$$
 
 ## References
 
