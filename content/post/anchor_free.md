@@ -14,11 +14,8 @@ math: true
 
 
 
-## CornerNet: An Anchor-Free Approach to Object Detection
+## CornerNet
 
-This is a comprehensive overview of the CornerNet object detection architecture, presented in three key sections, including its drawbacks.
-
-***
 
 ### 1. The Problem: Limitations of Anchor-Based Methods
 
@@ -85,6 +82,7 @@ While innovative, the CornerNet architecture exhibits two primary limitations:
     * This makes the bounding box **regression less robust**, as slight inaccuracies in either corner can lead to significant shifts in the final box, resulting in less stable and potentially less accurate localizations compared to center-based methods.
 
 
+---
 
 ## CenterNet: Architecture Enhancements
 
@@ -92,7 +90,7 @@ CenterNet (an improvement over CornerNet) is designed to resolve two major limit
 
 ### 1. Center Pooling and Center Constraint
 
-Center Pooling is introduced primarily to directly address the **Grouping Errors** prevalent in CornerNet and to handle the issue of weak local features at an object's geometric center.
+Center Pooling is introduced primarily to directly address the issue of weak local features(lead to wrong bounding boxes) at an object's geometric center.
 
 #### Core Motivation for Center Pooling
 
@@ -103,14 +101,11 @@ Center Pooling is introduced primarily to directly address the **Grouping Errors
 
 {{< figure src="/ansonwang/images/centerpooling.png" >}}
 
-The Center Pooling module performs accumulated maximum pooling in both **horizontal and vertical directions**. This ensures that only a point truly located at the object's center can simultaneously perceive strong feature information from the object's four boundaries (top, bottom, left, and right).
+The Center Pooling module performs accumulated maximum pooling in both **horizontal and vertical directions**. This ensures that only a point truly located at the object's center can simultaneously perceive strong feature information from the object's four boundaries (top left, bottom right).
 
 > ** Potential Center Pooling Issue:** Due to its four-directional accumulated maximum design, Center Pooling can be susceptible to **cross-object interference**. For instance, when a small object is near a large one, the small object's center may erroneously aggregate high-intensity features from the larger object's boundaries, potentially inflating the confidence of the small object's center and increasing the risk of false positives.
 
 ### 2. Cascade Corner Pooling (CCP) and Enhanced Localization
-
-
-
 
 CCP's main goal is to improve the accuracy of corner localization, which in turn contributes indirectly to more stable corner pairings and reduced grouping errors.
 
@@ -138,4 +133,5 @@ CCP employs a two-stage "cascaded" process, using a segmented search to better l
 
 ## References
 [1] Duan, Kaiwen, et al. "Centernet: Keypoint triplets for object detection." Proceedings of the IEEE/CVF international conference on computer vision. 2019.
+
 [2] Law, Hei, and Jia Deng. "Cornernet: Detecting objects as paired keypoints." Proceedings of the European conference on computer vision (ECCV). 2018.
